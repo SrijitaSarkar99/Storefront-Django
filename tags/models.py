@@ -6,7 +6,7 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 class Tag(models.Model):
     label = models.CharField(max_length=255)
 
-class ItemTag(models.Model):
+class TaggedItem(models.Model):
     #what tag applied to what object
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     # Type (product, video, article)
